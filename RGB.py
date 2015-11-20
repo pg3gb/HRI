@@ -23,23 +23,23 @@ GPIO.output(LED_Blue, 0)
 
 
 def display(self, color):
-    if (color = 'red'):
+    if (color == 'red'):
         GPIO.output(LED_Red, true)
         GPIO.output(LED_Green, 0)
         GPIO.output(LED_Blue, 0)
-    elif (color = 'green'):
+    elif (color == 'green'):
         GPIO.output(LED_Red, 0)
         GPIO.output(LED_Green, true)
         GPIO.output(LED_Blue, 0)
-    elif (color = 'blue'):
+    elif (color == 'blue'):
         GPIO.output(LED_Red, 0)
         GPIO.output(LED_Green, 0)
         GPIO.output(LED_Blue, true)
-    elif (color = 'white'):
+    elif (color == 'white'):
         GPIO.output(LED_Red, true)
         GPIO.output(LED_Green, true)
         GPIO.output(LED_Blue, true)
-    elif (color = 'off'):
+    elif (color == 'off'):
         GPIO.output(LED_Red, 0)
         GPIO.output(LED_Green, 0)
         GPIO.output(LED_Blue, 0)
