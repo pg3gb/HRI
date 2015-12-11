@@ -8,9 +8,9 @@ import time
 
 GPIO.setmode(GPIO.BCM)
 
-LED_Red = 8
-LED_Green = 9
-LED_Blue = 10
+LED_Red = 2
+LED_Green = 3
+LED_Blue = 4
 LED = [LED_Red,LED_Green,LED_Blue]
 
 GPIO.setup(LED_Red, GPIO.OUT)
