@@ -35,18 +35,6 @@ def display(self, color):
         GPIO.output(LED_Red, 0)
         GPIO.output(LED_Green, 0)
         GPIO.output(LED_Blue, true)
-    elif (color = 'yellow'):
-        GPIO.output(LED_Red, true)
-        GPIO.output(LED_Green, true)
-        GPIO.output(LED_Blue, 0)
-    elif (color = 'violet'):
-        GPIO.output(LED_Red, true)
-        GPIO.output(LED_Green, 0)
-        GPIO.output(LED_Blue, true)
-    elif (color = 'teal'):
-        GPIO.output(LED_Red, 0)
-        GPIO.output(LED_Green, true)
-        GPIO.output(LED_Blue, true)
     elif (color = 'white'):
         GPIO.output(LED_Red, true)
         GPIO.output(LED_Green, true)
