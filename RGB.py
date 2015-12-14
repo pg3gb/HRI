@@ -3,8 +3,7 @@
 #git push
 import RPi.GPIO as GPIO
 import time
-import pygame
-from pygame.locals import *
+
 #Establish Pins
 
 GPIO.setmode(GPIO.BCM)
