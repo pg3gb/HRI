@@ -46,7 +46,7 @@ def display(color):
         GPIO.output(LED_Blue, True)
 display('off') 
 
-for x in range (0, 10):
+for x in range (0, 5):
 	display('blue')
 	time.sleep(3)
 	display('red')
