@@ -3,7 +3,8 @@
 #git push
 import RPi.GPIO as GPIO
 import time
-
+import pygame
+from pygame.locals import *
 #Establish Pins
 
 GPIO.setmode(GPIO.BCM)
@@ -45,17 +46,13 @@ def display(color):
         GPIO.output(LED_Blue, True)
 display('off') 
 
-for x in range (0, 5):
+for x in range (0, 10):
 	display('blue')
-	time.sleep(1)
+	time.sleep(3)
 	display('red')
-	time.sleep(1)
-	display('green')
-	time.sleep(1)
-	display('white')
-	time.sleep(1)
-
+	time.sleep(3)
 display('off')
+
 	       
         
         
