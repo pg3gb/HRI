@@ -1,7 +1,7 @@
 # HRI
 # RGB LED for HR-OS1
-
-import RPi.GPIO
+#git push
+import RPi.GPIO as GPIO
 import time
 
 #Establish Pins
@@ -11,39 +11,52 @@ GPIO.setmode(GPIO.BCM)
 LED_Red = 2
 LED_Green = 3
 LED_Blue = 4
-LED = [LED_Red,LED_Green,LED_Blue]
 
 GPIO.setup(LED_Red, GPIO.OUT)
 GPIO.setup(LED_Green, GPIO.OUT)
 GPIO.setup(LED_Blue, GPIO.OUT)
 
-GPIO.output(LED_Red, 0)
-GPIO.output(LED_Green, 0)
-GPIO.output(LED_Blue, 0)
+GPIO.output(LED_Red, True)
+GPIO.output(LED_Green, True)
+GPIO.output(LED_Blue, True)
 
 
-def display(self, color):
+def display(color):
+    GPIO.setwarnings(False)
     if (color == 'red'):
-        GPIO.output(LED_Red, true)
-        GPIO.output(LED_Green, 0)
-        GPIO.output(LED_Blue, 0)
+        GPIO.output(LED_Red, False)
+        GPIO.output(LED_Green, True)
+        GPIO.output(LED_Blue, True)
     elif (color == 'green'):
-        GPIO.output(LED_Red, 0)
-        GPIO.output(LED_Green, true)
-        GPIO.output(LED_Blue, 0)
+        GPIO.output(LED_Red, True)
+        GPIO.output(LED_Green, False)
+        GPIO.output(LED_Blue, True)
     elif (color == 'blue'):
-        GPIO.output(LED_Red, 0)
-        GPIO.output(LED_Green, 0)
-        GPIO.output(LED_Blue, true)
+        GPIO.output(LED_Red, True)
+        GPIO.output(LED_Green, True)
+        GPIO.output(LED_Blue, False)
     elif (color == 'white'):
-        GPIO.output(LED_Red, true)
-        GPIO.output(LED_Green, true)
-        GPIO.output(LED_Blue, true)
+        GPIO.output(LED_Red, False)
+        GPIO.output(LED_Green, False)
+        GPIO.output(LED_Blue, False)
     elif (color == 'off'):
-        GPIO.output(LED_Red, 0)
-        GPIO.output(LED_Green, 0)
-        GPIO.output(LED_Blue, 0)
-        
+        GPIO.output(LED_Red, True)
+        GPIO.output(LED_Green, True)
+        GPIO.output(LED_Blue, True)
+display('off') 
+
+for x in range (0, 5):
+	display('blue')
+	time.sleep(1)
+	display('red')
+	time.sleep(1)
+	display('green')
+	time.sleep(1)
+	display('white')
+	time.sleep(1)
+
+display('off')
+	       
         
         
 
